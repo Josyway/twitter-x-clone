@@ -11,7 +11,7 @@ interface FollowButtonProps {
 }
 
 export default function FollowButton( { followedByUser, profileId, username }: FollowButtonProps ) {
-    const [pending, startTransition] = useTransition();
+    const [, startTransition] = useTransition();
     const [optimistFollowedByUser, setOptmisticFollowedByUser] = useOptimistic(followedByUser);
 
 async function handleFollowOrUnFollow() {
